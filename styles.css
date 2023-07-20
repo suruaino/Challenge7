@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Bellow are the text colors */
+--Pale-Violet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
+--Moderate-Violet: hsl(276, 55%, 52%); /* (chat on the left)*/
+--Desaturated-Dark-Violet: hsl(271, 15%, 43%);/* (chat on the right)*/
+--Grayish-Blue: hsl(206, 6%, 79%);/* (placeholder text)*/
+--Bg-Grayish-Blue: hsl(290, 16%, 93%); /*left message bg*/
+--Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);/* (main heading)*/
+--Dark-Grayish-Violet: hsl(270, 7%, 64%);/* (paragraph)*/
+
+    /* Bellow are the used gradients */
+--Light-Magenta: hsl(293, 100%, 63%);
+--Light-Violet: hsl(264, 100%, 61%);
+--Linear-Gradient-1: linear-gradient(
+    90deg, 
+    var(--Light-Violet), 
+    var(--Light-Magenta) 100%
+);
+/* More colors */
+--White: hsl(0, 0%, 100%);
+--Light-Grayish-Violet: hsl(270, 20%, 96%); /* (submit button background)*/
+--Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+--Very-Light-Magenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+}
+
+section #user_details{
+    background: var(--Linear-Gradient-1);
+    background-size: cover;
+    background-position: center;
+}
+body{
+    background-color: var(--Light-Grayish-Violet);
+    font-family: Rubik;
+    position: relative;
+}
+body .topbg{
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(
+        var(--Light-Magenta), 
+        var(--Light-Violet) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:0 0px 200px 0;
+}
+body .bottombg{
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(135deg, 
+        var(--Light-Violet) 40%, 
+        var(--Light-Magenta) 40%,
+        var(--Light-Magenta) 100%
+    );
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 300px 0 0 0 ;
+    opacity: .03;
+}
+#bar{
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#phone_look{
+    border: 10px solid white;
+    background-color: var(--Light-Grayish-Violet);
+    max-width: 18rem;
+    max-height: 100%;
+    min-width: 18rem;
+}
+#phone_look header{
+    color: var(--Light-Grayish-Violet);
+}
+#phone_look .phone-content{
+    font-size: .6rem;
+    line-height: .7rem;
+}
+#phone_look .phone-content .user{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    width: 100%;
+    max-height: 100%;
+}
+#phone_look .phone-content .user p{
+    background-color: var(--Bg-Grayish-Blue);
+    color: var(--Moderate-Violet);
+    border-radius: 10px 10px 10px 0;
+    width: 68%;
+    max-width: 12rem;
+    padding: .5rem;
+   
+}
+
+#phone_look .phone-content .user .date{
+    
+    background: linear-gradient( 90deg, var(--Light-Magenta), var(--Light-Violet));
+    border-radius: 10px 10px 10px 5px;
+}
+#phone_look .phone-content .friend{
+    max-height: 100%;
+}
+#phone_look .phone-content .friend p{
+    color: var(--Moderate-Violet);
+    border-radius: 10px 10px 0px 10px;
+}
+.phone-content .friend .imgbx img{
+    border-radius: 10px;
+    width: 45px;
+}
+section{
+    overflow: hidden;
+}
+
+
+/*We styling our input here*/
+#phone_look form .inputbx{
+    position: relative;
+    color: black;
+    width: 100%;
+    height: 2rem;
+    padding: 0 .5rem;
+    margin-top: 1rem;
+}
+#phone_look form .inputbx input{
+    position: absolute;
+    width: 90%;
+    height: 2rem;
+    border-radius: 20px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#phone_look form .inputbx label{
+    position: absolute;
+    font-size: .8rem;
+    left: 20px;
+    top: 0%;
+    left: 80px;
+    transform: translate(-50%, -50%);
+    color: var(--Grayish-Blue);
+}
+#phone_look form .inputbx i{
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    color: white;
+    border-radius: 50%;
+    padding: .3rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 0%;
+    right: 6px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Animations below*/
+@keyframes display1 {
+    0%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+/*Below are styles for the description section*/
+main .page-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+main .page-description h1{
+    color: var(--Very-Dark-Desaturated-Violet);
+    
+}
+main .page-description p{
+    color: var(--Dark-Grayish-Violet);
+}
+
+
+@media only screen and (min-width: 760px){
+    body .topbg{
+        width: 25%;
+        height: 90%;
+        border-radius:0 0px 200px 200px;
+       
+    }
+    body .bottombg{
+        width: 25%;
+        height: 90%;
+        border-radius: 200px 200px 0 0 ;
+        opacity: .03;
+
+    }
+    main .page-description{
+        max-width: 36rem;
+        text-align: left;
+        z-index: 1;
+    }
+}

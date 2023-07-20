@@ -25,8 +25,8 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/suruaino/Challenge7.git)
-- Live Site URL: [Add live site URL here](https://suru-chat-app.netlify.app/)
+- Solution URL: (https://github.com/suruaino/Challenge7.git)
+- Live Site URL: (https://suru-chat-app.netlify.app/)
 
 ## My process
 
